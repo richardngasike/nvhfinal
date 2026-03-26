@@ -177,7 +177,7 @@ export const metadata = {
       { url: '/nvhlogo.png', type: 'image/png', sizes: '192x192' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
-    shortcut: '/favicon.ico',
+    shortcut: '/nvhlogo.png',
   },
 
   manifest: '/manifest.json',
