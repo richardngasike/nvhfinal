@@ -1,0 +1,685 @@
+/* ─── HEADER WRAPPER ──────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  height: 72px;
+  transition: box-shadow 0.2s ease;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 16px;
+}
+
+/* ─── LOGO ────────────────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: opacity 0.15s ease;
+}
+
+.logo:hover {
+  opacity: 0.88;
+}
+
+.logoImageWrap {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2.5px solid #1a6b3c;
+  background: #1a6b3c;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(26, 107, 60, 0.3);
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logoTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1a6b3c;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.logoSub {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #6b7280;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ─── DESKTOP NAV ─────────────────────────────────────────────────── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+  justify-content: center;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.navLink:hover {
+  background: #f0faf4;
+  color: #1a6b3c;
+}
+
+.navLink.active {
+  background: #e8f5ee;
+  color: #1a6b3c;
+  font-weight: 600;
+}
+
+.navLinkIcon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ─── ACTIONS (right side) ────────────────────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Post Listing button */
+.postBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  background: #1a6b3c;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.postBtn:hover {
+  background: #145530;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 107, 60, 0.3);
+}
+
+/* Login / Register buttons */
+.loginBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: transparent;
+  color: #1a6b3c;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1.5px solid #1a6b3c;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.loginBtn:hover {
+  background: #1a6b3c;
+  color: #ffffff;
+}
+
+.registerBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #1a6b3c;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1.5px solid #1a6b3c;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, transform 0.15s ease;
+  white-space: nowrap;
+}
+
+.registerBtn:hover {
+  background: #145530;
+  transform: translateY(-1px);
+}
+
+/* ─── USER MENU ───────────────────────────────────────────────────── */
+.userMenu {
+  position: relative;
+}
+
+.userMenuBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px 7px 7px;
+  border-radius: 40px;
+  background: #f3f4f6;
+  border: 1.5px solid #e5e7eb;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937;
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.userMenuBtn:hover {
+  background: #e8f5ee;
+  border-color: #1a6b3c;
+}
+
+.userAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a6b3c, #0d4a2b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.userName {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  color: #6b7280;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ─── DROPDOWN MENU ───────────────────────────────────────────────── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  min-width: 210px;
+  padding: 8px;
+  z-index: 200;
+  animation: dropIn 0.15s ease;
+}
+
+@keyframes dropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdownHeader {
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid #f3f4f6;
+  margin-bottom: 6px;
+}
+
+.dropdownName {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdownEmail {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdownBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 5px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: #e8f5ee;
+  color: #1a6b3c;
+}
+
+.dropdownBadgePremium {
+  background: linear-gradient(135deg, #f5a623, #f0651a);
+  color: white;
+}
+
+.dropdownLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4b5563;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.dropdownLink:hover {
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+.dropdownLinkIcon {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.dropdownDivider {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+  margin: 6px 0;
+}
+
+.logoutLink {
+  color: #dc3545;
+}
+
+.logoutLink:hover {
+  background: #fff5f5;
+  color: #b91c1c;
+}
+
+.logoutLink .dropdownLinkIcon {
+  color: #dc3545;
+}
+
+/* ─── MOBILE BURGER ───────────────────────────────────────────────── */
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1.5px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.burger:hover {
+  background: #e8f5ee;
+  border-color: #1a6b3c;
+  color: #1a6b3c;
+}
+
+/* ─── MOBILE DRAWER ───────────────────────────────────────────────── */
+.mobileDrawer {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 999;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mobileInner {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+/* Mobile user card */
+.mobileUserCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f0faf4;
+  border: 1px solid #d1fae5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+}
+
+.mobileAvatarLarge {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a6b3c, #0d4a2b);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.mobileUserName {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+.mobileUserRole {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: 1px;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink.active {
+  background: #f0faf4;
+  color: #1a6b3c;
+}
+
+.mobileNavLinkIcon {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.mobileNavLink:hover .mobileNavLinkIcon,
+.mobileNavLink.active .mobileNavLinkIcon {
+  color: #1a6b3c;
+}
+
+.mobileDivider {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+  margin: 8px 0;
+}
+
+.mobilePostBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #1a6b3c;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 4px;
+  transition: background 0.15s ease;
+}
+
+.mobilePostBtn:hover {
+  background: #145530;
+}
+
+.mobileAuthBtns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.mobileLoginBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px;
+  border-radius: 10px;
+  background: transparent;
+  color: #1a6b3c;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1.5px solid #1a6b3c;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.mobileLoginBtn:hover {
+  background: #1a6b3c;
+  color: white;
+}
+
+.mobileRegisterBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 13px;
+  border-radius: 10px;
+  background: #1a6b3c;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1.5px solid #1a6b3c;
+  text-decoration: none;
+  font-family: inherit;
+  transition: background 0.15s ease;
+}
+
+.mobileRegisterBtn:hover {
+  background: #145530;
+}
+
+.mobileLogoutBtn {
+  color: #dc3545;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.mobileLogoutBtn:hover {
+  background: #fff5f5;
+  color: #b91c1c;
+}
+
+/* ─── RESPONSIVE BREAKPOINTS ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .logoTitle {
+    font-size: 0.92rem;
+  }
+
+  .navLink {
+    padding: 7px 10px;
+    font-size: 0.84rem;
+  }
+
+  .postBtn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  /* Hide desktop auth buttons on mobile */
+  .loginBtn,
+  .registerBtn {
+    display: none;
+  }
+
+  /* Hide post button on mobile (shown in drawer instead) */
+  .postBtn {
+    display: none;
+  }
+
+  /* Keep user menu visible on mobile for quick access */
+  .userMenuBtn .userName {
+    display: none;
+  }
+
+  .userMenuBtn .chevron {
+    display: none;
+  }
+
+  .userMenuBtn {
+    padding: 5px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+
+  /* Hide desktop dropdown on mobile (use drawer instead) */
+  .dropdown {
+    display: none;
+  }
+
+  .inner {
+    padding: 0 16px;
+  }
+
+  .logoTitle {
+    font-size: 0.9rem;
+  }
+
+  .logoSub {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 64px;
+  }
+
+  .mobileDrawer {
+    top: 64px;
+  }
+
+  .logoImageWrap {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logoTitle {
+    font-size: 0.85rem;
+  }
+
+  .inner {
+    padding: 0 12px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .logoText {
+    display: none;
+  }
+}

@@ -172,9 +172,9 @@ export const metadata = {
 
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
-      { url: '/android-chrome-192x192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/nvhlogo.png', sizes: 'any' },
+      { url: '/nvhlogo.png', type: 'image/png', sizes: '32x32' },
+      { url: '/nvhlogo.png', type: 'image/png', sizes: '192x192' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
     shortcut: '/favicon.ico',
