@@ -181,7 +181,7 @@ p { line-height: 1.7; }
 /* ─── HERO ────────────────────────────────────────────────────────── */
 .hero {
   background: 
-    linear-gradient(rgba(13, 74, 43, 0.85), rgba(26, 107, 60, 0.9)),
+    linear-gradient(rgba(179, 170, 41, 0.85), rgba(26, 107, 60, 0.9)),
     url('/herobg.jpeg');
   background-size: cover;
   background-position: center;
